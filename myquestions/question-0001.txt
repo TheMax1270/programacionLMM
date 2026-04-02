@@ -1,0 +1,20 @@
+Enunciado:
+Recibes un DataFrame de pandas que contiene registros de ventas de una empresa. Cada fila representa una transacción y el DataFrame incluye columnas como el identificador del producto, la categoría del producto, el precio unitario y la cantidad vendida.
+
+La empresa quiere analizar el rendimiento de sus categorías de productos, por lo que necesita calcular métricas agregadas por categoría a partir de los datos de ventas.
+
+Tu Misión: Escribe una función llamada resumen_ventas_por_categoria(df) que realice lo siguiente:
+
+Calcule una nueva columna llamada ingreso_total multiplicando el precio unitario por la cantidad vendida en cada fila.
+
+Agrupe los datos por la columna categoria.
+
+Para cada categoría calcule:
+
+el total de ingresos (suma de ingreso_total),
+
+la cantidad total de unidades vendidas,
+
+el precio promedio de los productos vendidos.
+
+Devuelva un DataFrame de pandas donde cada fila represente una categoría y las columnas contengan las métricas calculadas.

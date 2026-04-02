@@ -1,0 +1,22 @@
+Problema:
+Recibes un DataFrame de pandas que contiene información sobre viviendas en una ciudad. Cada fila representa una vivienda y el DataFrame incluye variables como area_m2, numero_habitaciones, edad_vivienda y distancia_centro. Además, existe una columna llamada precio que representa el valor de venta de cada vivienda.
+
+Una empresa inmobiliaria quiere construir un modelo que permita predecir el precio de una vivienda a partir de sus características utilizando técnicas de machine learning.
+
+Tu Misión: Escribe una función llamada entrenar_modelo_precio_vivienda(df, target_col) que realice lo siguiente:
+
+Separe las características (X) de la variable objetivo (y) indicada por target_col.
+
+Divida el conjunto de datos en entrenamiento y prueba utilizando train_test_split de sklearn.
+
+Entrene un modelo de LinearRegression de sklearn utilizando los datos de entrenamiento.
+
+Utilice el modelo entrenado para generar predicciones sobre el conjunto de prueba.
+
+Calcule el error cuadrático medio (Mean Squared Error) entre los valores reales y las predicciones usando mean_squared_error de sklearn.
+
+La función debe devolver dos elementos:
+
+el modelo de regresión entrenado,
+
+el valor del error cuadrático medio (MSE) calculado sobre el conjunto de prueba.

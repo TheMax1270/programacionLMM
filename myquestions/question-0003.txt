@@ -1,0 +1,17 @@
+El Problema:
+
+Recibes un DataFrame de pandas que contiene información de productos vendidos en una tienda. Cada fila representa una venta e incluye columnas como producto, categoria, precio_unitario, cantidad_vendida y fecha.
+
+La empresa quiere analizar cuáles productos generan más ingresos dentro de cada categoría, para identificar los artículos más rentables.
+
+Tu Misión: Escribe una función llamada top_productos_por_categoria(df, n) que realice lo siguiente:
+
+Cree una nueva columna llamada ingreso_total calculada como precio_unitario × cantidad_vendida.
+
+Agrupe los datos por categoria y producto para calcular el ingreso total generado por cada producto.
+
+Dentro de cada categoría, ordene los productos de mayor a menor según el ingreso total.
+
+Seleccione los n productos con mayor ingreso total dentro de cada categoría.
+
+La función debe devolver un DataFrame de pandas que contenga las columnas categoria, producto e ingreso_total, mostrando únicamente los n productos con mayores ingresos en cada categoría."

@@ -1,0 +1,22 @@
+El Problema:
+Recibes un DataFrame de pandas que contiene información de clientes de una empresa de telecomunicaciones. Cada fila representa un cliente e incluye variables como edad, ingreso_mensual, meses_contrato y numero_servicios. Además, existe una columna llamada abandono que indica si el cliente canceló el servicio (1) o no (0).
+
+La empresa quiere construir un modelo de machine learning que permita predecir qué clientes tienen mayor probabilidad de abandonar el servicio.
+
+Tu Misión: Escribe una función llamada entrenar_modelo_abandono(df, target_col) que realice lo siguiente:
+
+Separe las características (X) de la variable objetivo (y) indicada por target_col.
+
+Divida los datos en conjunto de entrenamiento y prueba utilizando train_test_split de sklearn.
+
+Escale las características numéricas usando StandardScaler de sklearn.
+
+Entrene un modelo de LogisticRegression de sklearn utilizando los datos de entrenamiento.
+
+Evalúe el modelo utilizando el accuracy score sobre el conjunto de prueba.
+
+La función debe devolver dos elementos:
+
+el modelo entrenado,
+
+el accuracy obtenido en el conjunto de prueba.
