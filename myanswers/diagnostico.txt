@@ -1,1 +1,21 @@
+Diagnóstico para answer-0349.py
 
+La solución correspondiente a answer-0349.py no presenta error de ejecución propio. El validador clasifica el caso como "usecase generator error", debido a un problema en el archivo question-0001-usecase-generator.py del repositorio del compañero.
+
+El error reportado por el validador es:
+
+preparar_datos() missing 2 required positional arguments: 'df' and 'target_col'
+
+La causa es que en el generador aparece primero una función llamada preparar_datos(df, target_col, grado=2, umbral_varianza=0.01), la cual requiere argumentos obligatorios. Sin embargo, el validador toma la primera función definida en el script del generador y la intenta ejecutar sin argumentos, como si fuera la función generadora de casos de uso.
+
+La función que realmente genera el caso de uso está más abajo y se llama generar_caso_de_uso_0001(). Esa función sí retorna correctamente input_data y output_esperado. Por tanto, el fallo no corresponde a la solución answer-0349.py, sino al orden de las funciones dentro del generador de casos de uso.
+
+Referencia en el generador:
+- La función preparar_datos aparece antes de generar_caso_de_uso_0001.
+- preparar_datos requiere los argumentos df y target_col.
+- generar_caso_de_uso_0001 es la función que realmente debería ejecutar el validador para producir el caso de uso.
+
+Referencia en mi solución:
+- answer-0349.py define la función preparar_datos(df, target_col, grado=2, umbral_varianza=0.01).
+- La función implementa el pipeline solicitado: PolynomialFeatures, VarianceThreshold y StandardScaler.
+- La función recibe los argumentos esperados y retorna X_transformada, y.
